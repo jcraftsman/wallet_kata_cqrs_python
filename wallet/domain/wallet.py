@@ -7,7 +7,7 @@ class Wallet(object):
         super().__init__()
         self.stocks = stocks
 
-    def value(self, stock_type, rate_provider):
+    def value(self, stock_type, rate_provider) -> Amount:
         price = 0
         for stock in self.stocks:
             rate = rate_provider.rate(stock.stock_type, stock_type)
